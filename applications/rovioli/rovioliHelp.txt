@@ -1,0 +1,983 @@
+rovioli: Warning: SetUsageMessage() never called
+
+  Flags from /home/peiweipan/maplab_ws/build/gflags_catkin/gflags_src-prefix/src/gflags_src/src/gflags.cc:
+    -flagfile (load flags from file) type: string default: ""
+    -fromenv (set flags from the environment [use 'export FLAGS_flag1=value'])
+      type: string default: ""
+    -tryfromenv (set flags from the environment if present) type: string
+      default: ""
+    -undefok (comma-separated list of flag names that it is okay to specify on
+      the command line even if the program does not define a flag with that
+      name.  IMPORTANT: flags in this list that have arguments MUST use the
+      flag=value format) type: string default: ""
+
+  Flags from /home/peiweipan/maplab_ws/build/gflags_catkin/gflags_src-prefix/src/gflags_src/src/gflags_completions.cc:
+    -tab_completion_columns (Number of columns to use in output for tab
+      completion) type: int32 default: 80
+    -tab_completion_word (If non-empty, HandleCommandLineCompletions() will
+      hijack the process and attempt to do bash-style command line flag
+      completion on this value.) type: string default: ""
+
+  Flags from /home/peiweipan/maplab_ws/build/gflags_catkin/gflags_src-prefix/src/gflags_src/src/gflags_reporting.cc:
+    -help (show help on all flags [tip: all flags can have two dashes])
+      type: bool default: false currently: true
+    -helpfull (show help on all flags -- same as -help) type: bool
+      default: false
+    -helpmatch (show help on modules whose name contains the specified substr)
+      type: string default: ""
+    -helpon (show help on the modules named by this flag value) type: string
+      default: ""
+    -helppackage (show help on all modules in the main package) type: bool
+      default: false
+    -helpshort (show help on only the main module for this program) type: bool
+      default: false
+    -helpxml (produce an xml version of help) type: bool default: false
+    -version (show version and build info and exit) type: bool default: false
+
+
+
+  Flags from /home/peiweipan/maplab_ws/build/glog_catkin/glog_src-prefix/src/glog_src/src/logging.cc:
+    -alsologtoemail (log messages go to these email addresses in addition to
+      logfiles) type: string default: ""
+    -alsologtostderr (log messages go to stderr in addition to logfiles)
+      type: bool default: false
+    -colorlogtostderr (color messages logged to stderr (if supported by
+      terminal)) type: bool default: false
+    -drop_log_memory (Drop in-memory buffers of log contents. Logs can grow
+      very quickly and they are rarely read before they need to be evicted from
+      memory. Instead, drop them from memory as soon as they are flushed to
+      disk.) type: bool default: true
+    -log_backtrace_at (Emit a backtrace when logging at file:linenum.)
+      type: string default: ""
+    -log_dir (If specified, logfiles are written into this directory instead of
+      the default logging directory.) type: string default: ""
+    -log_link (Put additional links to the log files in this directory)
+      type: string default: ""
+    -log_prefix (Prepend the log prefix to the start of each log line)
+      type: bool default: true
+    -log_utc_time (Use UTC time for logging.) type: bool default: false
+    -logbuflevel (Buffer log messages logged at this level or lower (-1 means
+      don't buffer; 0 means buffer INFO only; ...)) type: int32 default: 0
+    -logbufsecs (Buffer log messages for at most this many seconds) type: int32
+      default: 30
+    -logemaillevel (Email log messages logged at this level or higher (0 means
+      email all; 3 means email FATAL only; ...)) type: int32 default: 999
+    -logfile_mode (Log file mode/permissions.) type: int32 default: 436
+    -logmailer (Mailer used to send logging email) type: string default: ""
+    -logtostderr (log messages go to stderr instead of logfiles) type: bool
+      default: false
+    -max_log_size (approx. maximum log file size (in MB). A value of 0 will be
+      silently overridden to 1.) type: int32 default: 1800
+    -minloglevel (Messages logged at a lower level than this don't actually get
+      logged anywhere) type: int32 default: 0
+    -stderrthreshold (log messages at or above this level are copied to stderr
+      in addition to logfiles.  This flag obsoletes --alsologtostderr.)
+      type: int32 default: 2
+    -stop_logging_if_full_disk (Stop attempting to log to disk if the disk is
+      full.) type: bool default: false
+    -timestamp_in_logfile_name (put a timestamp at the end of the log file
+      name) type: bool default: true
+
+  Flags from /home/peiweipan/maplab_ws/build/glog_catkin/glog_src-prefix/src/glog_src/src/utilities.cc:
+    -symbolize_stacktrace (Symbolize the stack trace in the tombstone)
+      type: bool default: true
+
+  Flags from /home/peiweipan/maplab_ws/build/glog_catkin/glog_src-prefix/src/glog_src/src/vlog_is_on.cc:
+    -v (Show all VLOG(m) messages for m <= this. Overridable by --vmodule.)
+      type: int32 default: 0
+    -vmodule (per-module verbose level. Argument is a comma-separated list of
+      <module name>=<log level>. <module name> is a glob pattern, matched
+      against the filename base (that is, name ignoring .cc/.h./-inl.h). <log
+      level> overrides any value given by --v.) type: string default: ""
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/algorithms/dense-reconstruction/depth_integration/src/depth-integration.cc:
+    -dense_depth_integrator_enable_sigint_breaker (If enabled, the depth
+      integrator can be interrupted with Ctrl-C. Should be disabled if depth
+      integration is used in a headless console mode, such as as part of the
+      maplab server.) type: bool default: true
+    -dense_depth_integrator_timeshift_resource_to_imu_ns (Timeshift that is
+      applied to the resource timestamp. The shift is applied as follows:
+      t_resource_new = t_resource + shift.) type: int64 default: 0
+    -dense_depth_integrator_use_closest_to_vertex (If enabled, the depth
+      integrator is using only depth resources that are closest in time to a
+      vertex.) type: bool default: false
+    -dense_depth_integrator_visualize_only_with_known_baseframe (If enabled,
+      the depth integrator is only integrating missions that have a known
+      baseframe.) type: bool default: false
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/algorithms/feature-tracking/src/feature-tracking-pipeline.cc:
+    -feature_tracker_visualize_keypoint_detections (Visualize the raw keypoint
+      detections to a ros topic.) type: bool default: false
+    -feature_tracker_visualize_keypoint_matches (Visualize the keypoint matches
+      and the outliers.) type: bool default: false
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/algorithms/feature-tracking/src/feature-tracking-types.cc:
+    -feature_tracker_deterministic (If true, deterministic RANSAC outlier
+      rejection is used.) type: bool default: false
+    -feature_tracker_two_pt_ransac_max_iterations (Max iterations for the 2-pt
+      RANSAC used for feature tracking outlier removal.) type: uint64
+      default: 200
+    -feature_tracker_two_pt_ransac_threshold (Threshold for the 2-pt RANSAC
+      used for feature tracking outlier removal. The error is defined as (1 -
+      cos(alpha)) where alpha is the angle between the predicted and measured
+      bearing vectors.) type: double default: 3.8076935828690317e-05
+    -feature_tracking_descriptor_rotation_invariance (Enable rotation
+      invariance for descriptor extraction. Expect deteriorated matching
+      performance.) type: bool default: false
+    -feature_tracking_descriptor_scale_invariance (Enable scale invariance of
+      the chosen descriptor. Only useful if detector provides scale information
+      by using multiple octaves.) type: bool default: true
+    -feature_tracking_descriptor_type (Descriptor type to compute: 'brisk' or
+      'freak') type: string default: "brisk"
+    -feature_tracking_detector_max_feature_count (Max. number of features to
+      detect. After the whole detection pipeline the number of features will be
+      cut.) type: uint64 default: 700
+    -feature_tracking_detector_nms_radius (Radius around queried keypoint in
+      which other keypoints can be suppressed.) type: double default: 8
+    -feature_tracking_detector_nms_ratio_threshold (Suppress keypoints if their
+      response is lower than this threshold times the response of the queried
+      keypoint. A lower threshold should make the suppression more robust.
+      However, this will result in more keypoints being close to each other.)
+      type: double default: 0.90000000000000002
+    -feature_tracking_detector_orb_fast_threshold (Threshold on difference
+      between intensity of the central pixel and pixels of a circle around this
+      pixel.) type: int32 default: 20
+    -feature_tracking_detector_orb_num_features (How many features to detect.
+      Choose much fewer features if non-max suppression is not used.)
+      type: int32 default: 2000
+    -feature_tracking_detector_orb_patch_size (Size of the patch used by the
+      oriented BRIEF descriptor. On smaller pyramid layers the perceived image
+      area covered by a feature will be larger.) type: int32 default: 20
+    -feature_tracking_detector_orb_pyramid_levels (The number of pyramid
+      levels. Higher number of pyramids will increase scale invariance
+      properties but will also lead accumulations of keypoints in hotspots.
+      Feature detection can slow down considerably with higher numbers of
+      pyramid levels.) type: int32 default: 1
+    -feature_tracking_detector_orb_scale_factor (Pyramid decimation ratio,
+      greater than 1. scaleFactor==2 means the classical pyramid, where each
+      next level has 4x less pixels than the previous, but such a big scale
+      factor will degrade feature matching scores dramatically. On the other
+      hand, too close to 1 scale factor will mean that to cover certain scale
+      range you will need more pyramid levels and so the speed will suffer.)
+      type: double default: 1.2
+    -feature_tracking_detector_orb_score_lower_bound (Keypoints with a score
+      lower than this value will get removed. This can be useful to remove
+      keypoints of low quality or keypoints that are associated with image
+      noise.) type: double default: 9.9999999999999995e-08
+    -feature_tracking_detector_use_nms (Should non-maximum suppression be
+      applied after feature detection?) type: bool default: true
+    -feature_tracking_flip_descriptors (Rotate the descriptor pattern by 180
+      deg? This can be used to align descriptors between datasets that have
+      been recorded "upside down".) type: bool default: false
+    -feature_tracking_gridded_detection_num_threads_per_image (Number of
+      hardware threads used for detection (0 means N_cell/2).) type: uint64
+      default: 0
+    -feature_tracking_gridded_detector_cell_num_features_scaler (Scaler to
+      increase number of keypoints detector per grid cell (keypoints_per_cell =
+      total_keypoints * scaler / number_of_cells).) type: double default: 2
+    -feature_tracking_gridded_detector_num_grid_cols (Number of grid columns
+      for gridded detection.) type: uint64 default: 4
+    -feature_tracking_gridded_detector_num_grid_rows (Number of grid rows for
+      gridded detection.) type: uint64 default: 2
+    -feature_tracking_gridded_detector_use_gridded (Use multiple detectors on a
+      grid?) type: bool default: true
+    -feature_tracking_ocvfreak_pattern_scale (Scaling of the description
+      pattern.) type: double default: 22
+    -min_tracking_distance_to_image_border_px (Minimum tracking distance to the
+      image border in pixels. Has to be greater or equal to the descriptor
+      patch size.) type: uint64 default: 30
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/algorithms/loopclosure/descriptor-projection/src/flags.cc:
+    -lc_projected_quantizer_filename (File where to read the projected
+      quantizer from.) type: string default: ""
+    -lc_projection_matrix_filename (The name of the file for the projection
+      matrix.) type: string default: ""
+    -lc_target_dimensionality (The target dimensionality of the projection.)
+      type: int32 default: 10
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/algorithms/loopclosure/loop-closure-handler/src/loop-closure-handler.cc:
+    -lc_edge_covariance_scaler (Scaling the covariance of loopclosure edges. It
+      is identity by default.) type: double default: 9.9999999999999995e-08
+    -lc_edge_min_distance_meters (The minimum loop-closure gap distance such
+      that a loop-closure edge is created.) type: double default: 1
+    -lc_max_delta_position_m (Maximum delta position that a loop closure can
+      correct before it is rejected (negative values turn the check off).)
+      type: double default: -1
+    -lc_max_delta_rotation_deg (Maximum delta angle that a loop closure can
+      correct before it is rejected (negative values turn the check off).)
+      type: double default: -1
+    -lc_min_inlier_count (Minimum inlier count for loop closure.) type: int32
+      default: 10
+    -lc_min_inlier_ratio (Minimum inlier ratio for loop closure.) type: double
+      default: 0
+    -lc_nonlinear_refinement_p3p (If nonlinear refinement on all ransac inliers
+      should be run.) type: bool default: false
+    -lc_num_ransac_iters (Maximum number of ransac iterations for absolute pose
+      recovery.) type: int32 default: 100
+    -lc_ransac_pixel_sigma (Pixel sigma for ransac.) type: double default: 2
+    -lc_switch_variable_variance (The variance for the switch variable of the
+      loop-closure edges.) type: double default: 1e-08
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/algorithms/loopclosure/loop-closure-handler/src/loop-detector-node.cc:
+    -anchor_transform_min_inlier_count (Minimum inlier count for successful
+      mission to database alignment.) type: int32 default: 10
+    -anchor_transform_min_inlier_ratio (Minimum inlier ratio for successful
+      mission to database alignment.) type: double default: 0.20000000000000001
+    -anchor_transform_ransac_max_orientation_error_rad (Maximum orientation
+      error for inliers for mission baseframe RANSAC.) type: double
+      default: 0.17399999999999999
+    -anchor_transform_ransac_max_position_error_m (Maximum position error for
+      inliers for mission baseframe RANSAC.) type: double default: 2
+    -anchor_transform_ransac_num_interations (Maximum number of iterations for
+      mission baseframe RANSAC.) type: int32 default: 2000
+    -lc_feature_type (Type of features to loop close) type: string
+      default: "Binary"
+    -lc_filter_underconstrained_landmarks (If observations from
+      underconstrained landmarks should be filtered from the loop-closure
+      queries (bad landmarks are never added to the database, but can be used
+      for queries).) type: bool default: false
+    -lc_insert_lc_edge_instead_of_merging (Insert an LC edge in the pose graph
+      instead of merging landmarks.) type: bool default: false
+    -lc_use_random_pnp_seed (Use random seed for pnp RANSAC.) type: bool
+      default: true
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/algorithms/loopclosure/loop-closure-handler/src/visualization/loop-closure-visualizer.cc:
+    -lc_visualize_outliers (If outlier matches should be published on the loop
+      closure topic.) type: bool default: false
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/algorithms/loopclosure/loopclosure-common/src/flags.cc:
+    -feature_descriptor_type (The feature descriptors to use. [brisk, freak])
+      type: string default: "brisk"
+    -lc_knn_epsilon (Epsilon approximation value for the nearest neighbor
+      search.) type: double default: 2
+    -lc_knn_max_radius (Max radius for the nearest neighbor search.)
+      type: double default: 20
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/algorithms/loopclosure/matching-based-loopclosure/src/detector-settings.cc:
+    -lc_detector_engine (Which loop-closure engine to use. Options are: - imi: 
+      inverted multi index (binary) - imipq: inverted multi index with product
+      quantization (binary) - hsnw:  hierarchical navigable small world graphs
+      (float)The default options for binary descriptors is "imi".) type: string
+      default: "imi"
+    -lc_fraction_best_scores (Fraction of best scoring keyframes/vertices that
+      are considered for covisibility filtering.) type: double default: 0.25
+    -lc_hnsw_ef_construction (Parameter in HNSW that controls the time used
+      during construction versus accuracy. After a point increasing this will
+      have no effect.) type: int32 default: 50
+    -lc_hnsw_ef_query (Parameter in HNSW that trades off between time and
+      accuracy when querying. Must be bigger than the number of neighbours
+      queried.) type: int32 default: 50
+    -lc_hnsw_m (Number of bidirectional links in the HNSW search index. Ideal
+      is somewhere between 8-64. See the readme for more details.) type: int32
+      default: 12
+    -lc_min_image_time_seconds (Minimum time between matching images to allow a
+      loop closure.) type: double default: 10
+    -lc_min_verify_matches_num (The minimum number of matches needed to verify
+      geometry.) type: uint64 default: 10
+    -lc_num_neighbors (Number of neighbors to retrieve for loop-closure. -1
+      auto.) type: int32 default: -1
+    -lc_num_words_for_nn_search (Number of nearest words to retrieve in the
+      inverted index.) type: int32 default: 10
+    -lc_scoring_function (Type of scoring function to be used for scoring
+      keyframes.) type: string default: "accumulation"
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/algorithms/loopclosure/matching-based-loopclosure/src/train-vocabulary.cc:
+    -lc_num_descriptors_to_train (Number of descriptors used for training.)
+      type: int32 default: 100000
+    -lc_number_of_vocabulary_words (Number of words in the vocabulary.)
+      type: int32 default: 1000
+    -lc_product_quantization_num_components (Number of components for product
+      quantization.) type: int32 default: 1
+    -lc_product_quantization_num_dim_per_component (Number of components for
+      product quantization.) type: int32 default: 5
+    -lc_product_quantization_num_words (Number of words in the product
+      vocabulary.) type: int32 default: 256
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/algorithms/loopclosure/vocabulary-tree/src/helpers.cc:
+    -lc_kdtree_accelerator_eps (Epsilon for the NN search inside the kd-tree
+      based search accelerators.) type: double default: 0.10000000000000001
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/algorithms/loopclosure/vocabulary-tree/src/vocabulary-tree-maker.cc:
+    -lc_kmeans_levels (Number of levels in the vocabulary tree.) type: int32
+      default: 4
+    -lc_kmeans_splits (Number of splits in the kmeans step per level.)
+      type: int32 default: 10
+    -lc_num_kmeans_restarts (Number of restarts for the kmeans.) type: int32
+      default: 5
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/algorithms/map-optimization/src/outlier-rejection-solver.cc:
+    -ba_hide_iterations_console_output (Define whether iterations should have
+      output on verbosity level 0 or not.) type: bool default: false
+    -ba_outlier_rejection_max_reprojection_error_px (Reprojection error
+      threshold in pixels for observations.) type: double default: 50
+    -ba_outlier_rejection_reject_every_n_iters (Reject outliers every n
+      iterations of the optimizer.) type: int32 default: 3
+    -ba_outlier_rejection_use_reprojection_error (Use reprojection error to
+      reject outliers.) type: bool default: false
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/algorithms/map-optimization/src/solver-options.cc:
+    -ba_enable_signal_handler (If enabled, the optimization will register a
+      signal handler that allows the user to abort the optimization after the
+      next iterations with Ctrl-C.) type: bool default: true
+    -ba_function_tolerance (The minimizer terminates if (new_cost - old_cost) <
+      function_tolerance * old_cost. (Ceres default: 1e-6)) type: double
+      default: 9.9999999999999998e-13
+    -ba_gradient_tolerance (The minimizer terminates if: max_i |x -
+      Project(Plus(x, -g(x))| < gradient_tolerance. (Ceres default: 1e-10))
+      type: double default: 1e-10
+    -ba_initial_trust_region_radius (Initial radius of trust region. (Ceres
+      default: 1e4)) type: double default: 100000
+    -ba_linear_solver_type (Options: 'CGNR', 'SPARSE_NORMAL_CHOLESKY',
+      'SPARSE_SCHUR', 'ITERATIVE_SCHUR'.) type: string
+      default: "SPARSE_NORMAL_CHOLESKY"
+    -ba_max_consecutive_nonmonotonic_steps (Maximum number of steps where the
+      cost is increasing. This only has an effect if
+      --ba_use_nonmonotonic_steps is enabled. (Ceres default: 5)) type: int32
+      default: 5
+    -ba_max_time_seconds (Maximum amount of time for which the solver should
+      run.) type: int32 default: 1000000
+    -ba_max_trust_region_radius (Maximum radius of trust region. (Ceres
+      default: 1e16)) type: double default: 1e+20
+    -ba_min_trust_region_radius (Minimum radius of trust region. (Ceres
+      default: 1e-32)) type: double default: 1.0000000000000001e-32
+    -ba_num_iterations (Max. number of iterations.) type: int32 default: 30
+    -ba_parameter_tolerance (The minimizer terminates if: |step|_2 <=
+      parameter_tolerance * ( |x|_2 +  parameter_tolerance). (Ceres default:
+      1e-8)) type: double default: 1e-08
+    -ba_sparse_linear_algebra_library_type (Default: The highest available
+      according to: SUITE_SPARSE > CX_SPARSE > EIGEN_SPARSE > NO_SPARSE)
+      type: string default: "SUITE_SPARSE"
+    -ba_use_jacobi_scaling (Use jacobin scaling.) type: bool default: true
+    -ba_use_nonmonotonic_steps (If enabled, the objective function is allowed
+      to get worse for a max number of steps define with
+      --ba_max_consecutive_nonmonotonic_steps. The idea is that in the long run
+      the optimization is able to 'jump over boulders' in an attempt to find a
+      better solution. (Ceres default: false)) type: bool default: false
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/algorithms/map-optimization/src/vi-map-optimizer.cc:
+    -ba_visualize_every_n_iterations (Update the visualization every n
+      optimization iterations.) type: int32 default: 3
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/algorithms/map-optimization/src/vi-map-relaxation.cc:
+    -lc_relax_merge_landmarks (If enabled, the loop closure part of the pose
+      graph relaxation algorithm will also merge the landmarks in addition to
+      adding temporary loop closure edges.) type: bool default: false
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/algorithms/map-optimization/src/vi-optimization-builder.cc:
+    -ba_absolute_pose_sensor_fix_mission_baseframes (Whether or not to fix the
+      mission baseframes (T_G_M) during optimization. This flag will only take
+      effect if absolute pose constraints are enabled!) type: bool
+      default: true
+    -ba_altitude_meters (Altitude in meters to estimate the gravity magnitude.)
+      type: double default: 392
+    -ba_feature_type (Type of features to use in bundle adjustment, will
+      default to using all of them at once.) type: string default: "Binary"
+    -ba_fix_6dof_odometry_extrinsics (Whether or not to fix the extrinsics of
+      the 6DoF odometry sensor.) type: bool default: true
+    -ba_fix_absolute_pose_sensor_extrinsics (Whether or not to fix the
+      extrinsics of the absolute 6DoF pose constraints sensor (T_B_S), e.g. GPS
+      to IMU calibration. This flag will only take effect if absolute pose
+      constraints are enabled!) type: bool default: true
+    -ba_fix_accel_bias (Whether or not to fix the bias of the IMU
+      accelerometer.) type: bool default: false
+    -ba_fix_gyro_bias (Whether or not to fix the bias of the IMU gyroscope.)
+      type: bool default: false
+    -ba_fix_landmark_positions (Whether or not to fix the positions of the
+      landmarks.) type: bool default: false
+    -ba_fix_ncamera_extrinsics_rotation (Whether or not to fix the rotation
+      extrinsics of the ncamera(s).) type: bool default: true
+    -ba_fix_ncamera_extrinsics_translation (Whether or not to fix the
+      translation extrinsics of the ncamera(s).) type: bool default: true
+    -ba_fix_ncamera_intrinsics (Whether or not to fix the intrinsics of the
+      ncamera(s).) type: bool default: true
+    -ba_fix_velocity (Whether or not to fix the velocity of the vertices.)
+      type: bool default: false
+    -ba_fix_vertices (Whether or not to fix vertex poses in optimization.)
+      type: bool default: false
+    -ba_fix_wheel_odometry_extrinsics (Whether or not to fix the extrinsics of
+      the wheel odometry sensor.) type: bool default: true
+    -ba_include_6dof_odometry (Whether or not to include 6DoF odometry
+      constraints (T_St_Stp1) for an odometry sensor frame S.) type: bool
+      default: false
+    -ba_include_absolute_pose_constraints (Whether or not to include absolute
+      6DoF pose constraints (T_G_B), e.g. GPS or AprilTag detections.)
+      type: bool default: false
+    -ba_include_inertial (Whether or not to include IMU error-terms.)
+      type: bool default: true
+    -ba_include_loop_closure_edges (Whether or not to add the loop closure
+      edges present in the map to the optimization problem. The visual loop
+      closure does not use these edges by default, but merges the landmarks
+      (i.e. loop closures are part of the visual error terms). Pose graph
+      relaxation on the other hand adds visual loop closures as edges by
+      default.) type: bool default: false
+    -ba_include_visual (Whether or not to include visual error-terms.)
+      type: bool default: true
+    -ba_include_wheel_odometry (Whether or not to include wheel (relative pose)
+      error-terms.) type: bool default: false
+    -ba_latitude (Latitude to estimate the gravity magnitude.) type: double
+      default: 47.219999999999999
+    -ba_min_landmarks_per_frame (Minimum number of landmarks a frame must
+      observe to be included in the problem.) type: int32 default: 0
+    -ba_use_visual_outlier_rejection_solver (Reject outlier landmarks during
+      the solve?) type: bool default: true
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/algorithms/map-sparsification/src/keyframe-pruning.cc:
+    -kf_distance_threshold_m (Distance threshold to add a new keyframe [m].)
+      type: double default: 0.75
+    -kf_every_nth_vertex (Force a keyframe every n-th vertex.) type: uint64
+      default: 10
+    -kf_min_shared_landmarks_obs (Coobserved landmark number to add a new
+      keyframe.) type: uint64 default: 20
+    -kf_rotation_threshold_deg (Rotation threshold to add a new keyframe
+      [deg].) type: double default: 20
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/algorithms/map-sparsification/src/sampler-factory.cc:
+    -sparsification_descriptor_dev_scoring_threshold (Minimum desired number of
+      keypoints per each map keyframe) type: double default: 10
+    -sparsification_min_keypoints_per_keyframe (Minimum desired number of
+      keypoints per each map keyframe) type: int32 default: 30
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/algorithms/online-map-builders/src/stream-map-builder.cc:
+    -map_builder_save_image_as_resources (Store the images associated with the
+      visual frames to the map resource folder.) type: bool default: false
+    -map_builder_save_point_cloud_maps_as_resources (Store the point cloud
+      (sub-)maps associated with an external source to the map resource
+      folder.) type: bool default: true
+    -map_builder_save_point_clouds_as_range_image_camera_id (Camera id of the
+      depth camera used to convert lidar point clouds to range images maps.)
+      type: string default: ""
+    -map_builder_save_point_clouds_as_range_image_including_intensity_image (If
+      enabled, the color or intensity information in the point cloud is used to
+      create a corresponding intensity/color for each point cloud in addition
+      to the range image.) type: bool default: true
+    -map_builder_save_point_clouds_as_resources (Store the point clouds
+      associated with a lidar sensor to the map resource folder.) type: bool
+      default: false
+    -map_builder_visualize_lidar_depth_maps_in_ocv_window (If enabled, opencv
+      windows with the result of the lidar scan to lidar depth map conversion
+      will be opened.) type: bool default: false
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/algorithms/vi-map-helpers/src/vi-map-manipulation.cc:
+    -disturb_max_translational_disturbance_norm_m (The maximum translational
+      disturbance that is applied to a vertex.) type: double
+      default: 0.050000000000000003
+    -disturb_max_yaw_angle_rad (The maximum yaw angle disturbance.)
+      type: double default: 0.050000000000000003
+    -disturb_random_generator_seed (The seed for the random number generator
+      for distrubing vertices.) type: int64 default: 0
+    -disturb_translation_random_walk_sigma_m (Standard deviation of the normal
+      distribution determining the change in translation for each vertex.)
+      type: double default: 0.0050000000000000001
+    -disturb_yaw_angle_stddev_rad (Standard deviation for determining the yaw
+      angle disturbance.) type: double default: 0.00050000000000000001
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/applications/rovioli/app/rovioli-app.cc:
+    -external_imu_parameters_rovio (Optional, path to the IMU configuration
+      yaml for ROVIO. If none is provided the maplab values will be used for
+      ROVIO as well.) type: string default: ""
+    -optimize_map_to_localization_map (Optimize and process the map into a
+      localization map before saving it.) type: bool default: false
+    -overwrite_existing_map (If set to true, an existing map will be
+      overwritten on save. Otherwise, a number will be appended to
+      save_map_folder to obtain an available folder.) type: bool default: false
+    -save_map_folder (Save map to folder; if empty nothing is saved.)
+      type: string default: ""
+    -sensor_calibration_file (Path to sensor calibration yaml.) type: string
+      default: ""
+    -vio_localization_map_folder (Path to a localization summary map or a full
+      VI-map used for localization.) type: string default: ""
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/applications/rovioli/src/data-publisher-flow.cc:
+    -export_estimated_poses_to_csv (If not empty, the map builder will export
+      the estimated poses to a CSV file.) type: string default: ""
+    -map_publish_interval_s (Interval of publishing the visual-inertial map to
+      ROS [seconds].) type: double default: 2
+    -publish_debug_markers (Publish debug sphere markers for T_M_I, T_G_I and
+      localization frames.) type: bool default: true
+    -publish_only_on_keyframes (Publish frames only on keyframes instead of the
+      IMU measurements. This means a lower frequency.) type: bool
+      default: false
+    -rovioli_visualize_map (Set to false to disable map visualization. Note:
+      map building needs to be active for the visualization.) type: bool
+      default: true
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/applications/rovioli/src/datasource-factory.cc:
+    -datasource_rosbag (Path to rosbag for bag sources.) type: string
+      default: ""
+    -datasource_type (Data source type: rosbag / rostopic) type: string
+      default: "rosbag"
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/applications/rovioli/src/datasource-rosbag.cc:
+    -rovioli_zero_initial_timestamps (If set to true, the timestamps outputted
+      by the estimator start with 0. Not zeroing the timestamps may lead to
+      less accurate results due to rounding errors.) type: bool default: false
+    -vio_rosbag_end_s (End of the rosbag in seconds.) type: double default: 0
+    -vio_rosbag_realtime_playback_rate (Playback rate of the ROSBAG. Real-time
+      corresponds to 1.0. This only makes sense when using offline data
+      sources.) type: double default: 1
+    -vio_rosbag_start_s (Start of the rosbag in seconds.) type: double
+      default: 0
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/applications/rovioli/src/datasource.cc:
+    -imu_to_camera_time_offset_ns (Fixed time offset of IMU to the camera, such
+      that: t_imu - offset = t_cam) type: int64 default: 0
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/applications/rovioli/src/feature-tracking.cc:
+    -rovioli_descriptor_rotation_invariance (Use rotation invariant
+      descriptors.) type: bool default: true
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/applications/rovioli/src/imu-camera-synchronizer.cc:
+    -vio_nframe_sync_max_output_frequency_hz (Maximum output frequency of the
+      synchronized IMU-NFrame structures from the synchronizer.) type: double
+      default: 10
+    -vio_nframe_sync_tolerance_ns (Tolerance of the timestamps of two images to
+      consider them as part of a single n-frame [ns].) type: int64
+      default: 500000
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/applications/rovioli/src/localizer-flow.cc:
+    -vio_max_localization_frequency_hz (Maximum localization frequency [hz].)
+      type: double default: 2
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/applications/rovioli/src/localizer.cc:
+    -rovioli_max_num_localization_constraints (Max. number of localization
+      constraints to process per camera. No prunning when 0.) type: uint64
+      default: 25
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/applications/rovioli/src/map-builder-flow.cc:
+    -localization_map_keep_landmark_fraction (Fraction of landmarks to keep
+      when creating a localization summary map.) type: double default: 0
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/applications/rovioli/src/ros-helpers.cc:
+    -rovioli_image_16_bit_to_8_bit_scale_factor (Scale factor applied to 16bit
+      images when converting them to 8bit images.) type: double default: 1
+    -rovioli_image_16_bit_to_8_bit_shift (Shift applied to the scaled values
+      when converting 16bit images to 8bit images.) type: double default: 0
+    -rovioli_image_apply_clahe_histogram_equalization (Apply CLAHE histogram
+      equalization to image.) type: bool default: false
+    -rovioli_image_clahe_clip_limit (CLAHE histogram equalization parameter:
+      clip limit.) type: int32 default: 2
+    -rovioli_image_clahe_grid_size (CLAHE histogram equalization parameter:
+      grid size.) type: int32 default: 8
+    -rovioli_image_resize_factor (Factor to resize images.) type: double
+      default: 1
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/applications/rovioli/src/rovio-factory.cc:
+    -rovio_enable_frame_visualization (Set to false to disable the Rovio GUI.)
+      type: bool default: true
+    -rovio_image_mask_path (Path to image mask to be applied to the ROVIO. No
+      features are extracted on the masked areas. Currently only supports a
+      single camera.) type: string default: ""
+    -rovioli_position_noise_density (Position prediction noise density
+      [m/sqrt(s)].) type: double default: 0.01
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/applications/rovioli/src/rovio-flow.cc:
+    -rovio_active_camera_indices (Comma separated indices of cameras to use for
+      motion tracking.) type: string default: "0"
+    -rovio_update_filter_on_imu (Update the filter state for IMU measurement;
+      if false the IMU measurements are queued and the state is only forward
+      propagated before the next update.) type: bool default: true
+    -rovioli_enable_health_checking (Perform health checking on the estimator
+      output and reset if necessary.) type: bool default: false
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/applications/rovioli/src/rovio-localization-handler.cc:
+    -rovioli_baseframe_init_position_covariance_msq (Position covariance of the
+      baseframe initialization [m^2].) type: double default: 20
+    -rovioli_baseframe_init_rotation_covariance_radsq (Rotation covariance of
+      the baseframe initialization [rad^2].) type: double
+      default: 1.5707963267948966
+    -rovioli_localization_max_gravity_misalignment_deg (Localization results
+      are rejected if the angle between the gravitydirection of the odometry
+      and the localization exceeds this value.) type: double default: 5
+    -rovioli_max_mean_localization_reprojection_error_px (If mean reprojection
+      error of the matches exceeds this value, reinitialize the baseframe.)
+      type: double default: 100
+    -rovioli_min_num_baseframe_estimates_before_init (Number of T_G_M
+      measurements to collect before initializing T_G_M.) type: uint64
+      default: 2
+    -rovioli_min_number_of_structure_constraints (After ROVIOLI rejects
+      structure constraints based on their reprojection error, this is the
+      minimum number of constraints required to accept a localization.)
+      type: int32 default: 5
+    -rovioli_use_6dof_localization (Localize using 6dof constraints instead of
+      structure constraints.) type: bool default: false
+    -rovioli_use_6dof_localization_for_inactive_cameras (ROVIO is set to always
+      run in monocular mode, but the maplab part of ROVIOLI will build a map
+      and localize based on all cameras. If there is a localization result for
+      the active ROVIO camera, it will update the filter using either 2D-3D
+      correspondences (structure constraints) or 6DoF constraints.  In
+      structure constraints mode (default) it will ignore the results of the
+      inactive cameras. If this option is enabled however, it will use the
+      localization results of the inactive camera as 6DoF update in case the
+      active camera didn't localize at all.) type: bool default: false
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/applications/rovioli/src/rovioli-node.cc:
+    -rovioli_run_map_builder (When set to false, the map builder will be
+      deactivated and no map will be built. Rovio+Localization will still run
+      as usual.) type: bool default: true
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/aslam_cv2/aslam_cv_cameras/src/distortion.cc:
+    -acv_inv_distortion_tolerance (Convergence tolerance for iteratedinverse
+      distortion functions.) type: double default: 1e-08
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/aslam_cv2/aslam_cv_matcher/src/gyro-two-frame-matcher.cc:
+    -gyro_matcher_large_search_distance_px (Large search rectangle size for
+      keypoint matches. Only used if small search was unsuccessful.)
+      type: int32 default: 20
+    -gyro_matcher_small_search_distance_px (Small search rectangle size for
+      keypoint matches.) type: int32 default: 10
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/aslam_cv2/aslam_cv_tracker/src/feature-tracker-gyro.cc:
+    -gyro_lk_candidate_ratio (This ratio defines the number of unmatched (from
+      frame k to (k+1)) keypoints that will be tracked with the lk tracker to
+      the next frame. If we detect N keypoints in frame (k+1), we track at most
+      'N times this ratio' keypoints to frame (k+1) with the lk tracker. A
+      value of 0 means that pure tracking by matching descriptors will be
+      used.) type: double default: 0.40000000000000002
+    -gyro_lk_max_pyramid_levels (If set to 0, pyramids are not used (single
+      level), if set to 1, two levels are used, and so on. If pyramids are
+      passed to the input then the algorithm will use as many levels as
+      possible but not more than this threshold.) type: int32 default: 1
+    -gyro_lk_max_status_track_length (Status track length is the track length
+      since the status of the keypoint has changed (e.g. from lk tracked to
+      detected or the reverse). The lk tracker will not track keypoints with
+      longer status track length than this value.) type: uint64 default: 10
+    -gyro_lk_min_eigenvalue_threshold (The algorithm calculates the minimum
+      eigenvalue of a 2x2 normal matrix of optical flow equations, divided by
+      number of pixels in a window. If this value is less than this threshold,
+      the corresponding feature is filtered out and its flow is not processed,
+      so it allows to remove bad points and get a performance boost.)
+      type: double default: 0.001
+    -gyro_lk_track_detected_threshold (Threshold that defines how many times a
+      detected feature has to be matched to be deemed worthy to be tracked by
+      the LK-tracker. A value of 1 means that it has to be at least detected
+      twice and matched once.) type: uint64 default: 1
+    -gyro_lk_window_size (Size of the search window at each pyramid level.)
+      type: int32 default: 21
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/common/console-common/src/basic-console-plugin.cc:
+    -all (Set to true to display all commands in help.) type: bool
+      default: false
+    -command (Flag for console commands where another command is to be passed
+      as argument.) type: string default: ""
+    -command_filter (If this is set, help will only show commands that match
+      this filter.) type: string default: ""
+    -plugin (Defines the plugin for which to show help.) type: string
+      default: ""
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/common/console-common/src/console.cc:
+    -command_history_filename (Where the persistent command history is stored.)
+      type: string default: ".vi_command_history"
+    -keep_gflags (If set to true, changes to gflags during the following
+      command won't be reset.) type: bool default: false
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/common/maplab-common/src/multi-threaded-progress-bar.cc:
+    -show_progress_bar (Set to false to disable the output of the progress bar
+      (useful for benchmarking).) type: bool default: true
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/common/maplab-common/src/proto-serialization-helper.cc:
+    -proto_max_size_megabytes (The maximum allowed size for protobuf
+      structures. The hard limit for this is 2 gigabytes.) type: int32
+      default: 256
+    -proto_use_compression (If enabled, the protobufs will be compressed when
+      storing and decompressed when loading.) type: bool default: true
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/common/maplab-common/src/shared-gflags.cc:
+    -map_folder (The folder on which a console command operates.) type: string
+      default: ""
+    -map_key (The map key for a console command.) type: string default: ""
+    -map_mission (The mission ID a command should operate on.) type: string
+      default: ""
+    -map_mission_list (List of comma separated mission IDs a command should
+      operated on.) type: string default: ""
+    -overwrite (If set to true, existing files on the disks will get
+      overwritten.) type: bool default: false
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/common/maplab-common/src/threading-helpers.cc:
+    -num_hardware_threads (Number of hardware threads to announce. (0: use
+      environment variable MAPLAB_NUM_HARDWARE_THREADS if set, otherwise
+      autodetect)) type: uint64 default: 0
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/common/vio-common/src/rostopic-settings.cc:
+    -vio_camera_topic_suffix (Image name appended to camera topic.)
+      type: string default: "/image_raw"
+    -vio_hardware_features_topic (Name of the hardware features topic.)
+      type: string default: "hw_features"
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/console-plugins/loop-closure-plugin/src/vi-map-merger.cc:
+    -lc_against_cumulative_map (Cumulate all landmarks simultaneously into the
+      database and query against that. Only to be used as a refinement step at
+      the end, because otherwise any misalignments will introduce bad
+      associations.) type: bool default: false
+    -lc_only_against_other_missions (If true, no inter-mission loop-closures
+      are sought.) type: bool default: false
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/console-plugins/map-sparsification-plugin/src/map-sparsification-plugin.cc:
+    -num_landmarks_to_keep (Number of landmarks to keep after sparsification.)
+      type: int32 default: -1
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/map-structure/vi-map/src/landmark-quality-metrics.cc:
+    -elq_lidar_max_distance_from_closest_observer (Maximum distance from
+      closest observer for a 3D LiDAR landmark to be well constrained [m].)
+      type: double default: 60
+    -elq_lidar_max_observation_error_m (Maximum distance between any 3D LiDAR
+      observation and the landmark [m]. When negative this check will be
+      ignored.) type: double default: -1
+    -elq_lidar_min_distance_from_closest_observer (Minimum distance from
+      closest observer for a 3D LiDAR landmark to be well constrained [m].)
+      type: double default: 1
+    -elq_lidar_min_observers (Minimum number of observers for a 3D LiDAR
+      landmark to be well constrained.) type: uint64 default: 1
+    -elq_max_distance_from_closest_observer (Maximum distance from closest
+      observer for a landmark to be well constrained [m].) type: double
+      default: 40
+    -elq_max_reprojection_error_px (Maximum reprojection error of any landmark
+      observation [px]. When negative this check will be ignored.) type: double
+      default: -1
+    -elq_min_distance_from_closest_observer (Minimum distance from closest
+      observer for a landmark to be well constrained [m].) type: double
+      default: 0.050000000000000003
+    -elq_min_observation_angle_deg (Minimum angle disparity between all
+      observers for a landmark to bewell constrained [deg].) type: double
+      default: 5
+    -elq_min_observers (Minimum number of observers for a landmark to be well
+      constrained.) type: uint64 default: 4
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/map-structure/vi-map/src/sensor-utils.cc:
+    -selected_absolute_6dof_sensor_id (If there is more than one Absolute6DoF
+      sensor in the sensor manager, use this flag to determine which one is
+      used.) type: string default: ""
+    -selected_gps_utm_sensor_id (If there is more than one GPS UTM sensor in
+      the sensor manager, use this flag to determine which one is used.)
+      type: string default: ""
+    -selected_gps_wgs_sensor_id (If there is more than one GPS WGS sensor in
+      the sensor manager, use this flag to determine which one is used.)
+      type: string default: ""
+    -selected_imu_sensor_id (If there is more than one IMU in the sensor
+      manager, use this flag to determine which one is used.) type: string
+      default: ""
+    -selected_lidar_sensor_id (If there is more than one Lidar in the sensor
+      manager, use this flag to determine which one is used.) type: string
+      default: ""
+    -selected_loop_closure_sensor_id (If there is more than one Relative6DOF
+      sensor in the sensor manager, use this flag to determine which one is
+      used.) type: string default: ""
+    -selected_ncamera_sensor_id (If there is more than one NCamera in the
+      sensor manager, use this flag to determine which one is used.)
+      type: string default: ""
+    -selected_odometry_6dof_sensor_id (If there is more than one 6DOF Odometry
+      sensor in the sensor manager, use this flag to determine which one is
+      used.) type: string default: ""
+    -selected_point_cloud_map_sensor_id (If there is more than one point cloud
+      map sensor in the sensor manager, use this flag to determine which one is
+      used.) type: string default: ""
+    -selected_wheel_odometry_sensor_id (If there is more than one WheelOdometry
+      sensor in the sensor manager, use this flag to determine which one is
+      used.) type: string default: ""
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/map-structure/vi-map/src/vi-map.cc:
+    -disable_consistency_check (If enabled, no consistency checks are run.)
+      type: bool default: false
+
+
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/visualization/src/common-rviz-visualization.cc:
+    -tf_abs_6dof_sensor_frame (abs_6dof_sensor tf frame name) type: string
+      default: "abs_6dof_sensor"
+    -tf_camera_frame (camera tf frame name) type: string default: "camera"
+    -tf_external_features_frame (external_features tf frame name) type: string
+      default: "external_features"
+    -tf_gps_utm_sensor_frame (gps_utm_sensor tf frame name) type: string
+      default: "gps_utm_sensor"
+    -tf_gps_wgs_sensor_frame (gps_wgs_sensor tf frame name) type: string
+      default: "gps_wgs_sensor"
+    -tf_imu_frame (imu tf frame name) type: string default: "imu"
+    -tf_imu_refined_frame (refined imu tf frame name) type: string
+      default: "imu_refined"
+    -tf_lc_sensor_frame (lc_sensor tf frame name) type: string
+      default: "lc_sensor"
+    -tf_lidar_sensor_frame (lidar tf frame name) type: string
+      default: "lidar_sensor"
+    -tf_map_frame (map tf frame name) type: string default: "map"
+    -tf_mission_frame (mission tf frame name) type: string default: "mission"
+    -tf_ncamera_frame (ncamera tf frame name) type: string default: "ncamera"
+    -tf_odometry_6dof_sensor_frame (odometry_6dof_sensor tf frame name)
+      type: string default: "odometry_6dof_sensor"
+    -tf_pointcloud_map_frame (pointcloud_map tf frame name) type: string
+      default: "pointcloud_map"
+    -tf_wheel_odometry_sensor_frame (wheel_odometry_sensor tf frame name)
+      type: string default: "wheel_odometry_sensor"
+    -vis_default_namespace (RVIZ namespace) type: string
+      default: "maplab_rviz_namespace"
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/visualization/src/constant-velocity-smoother.cc:
+    -pose_smoother_cutoff_frequency (Cutoff frequency for the velocity
+      smoothing [Hz].) type: double default: 40
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/visualization/src/debug-visualizer.cc:
+    -debug_visualizer_enabled (Enables the default visualizer that plots the
+      map defined by --debug_visualizer_map_key every
+      --debug_visualizer_plot_every_s seconds.) type: bool default: false
+    -debug_visualizer_map_key (Map key to the map that is visualized in a
+      regular interval defined by --debug_visualizer_plot_every_s) type: string
+      default: ""
+    -debug_visualizer_plot_every_ms (Interval at which the map defined by
+      --debug_visualizer_map_key should be published. [ms]) type: uint64
+      default: 1000
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/visualization/src/resource-visualization.cc:
+    -vis_pointcloud_accumulated_before_publishing (Accumulate the point cloud
+      resources before publishing them all at once. Use
+      --vis_pointcloud_visualize_every_nth to sparsify the pointcloud,
+      otherwise it will grow too large.) type: bool default: false
+    -vis_pointcloud_color_random (If enabled, every point cloud receives a
+      random color.) type: bool default: false
+    -vis_pointcloud_export_accumulated_pc_to_ply_path (If a path is provided,
+      the accumulated point cloud of the visualization command is also exported
+      to PLY file. This export only makes sense if the visualization is
+      accumulating the point cloud, therefore enable
+      --vis_pointcloud_accumulated_before_publishing=true.) type: string
+      default: ""
+    -vis_pointcloud_mission_id_topic (Specifies the topic for the mission
+      specific dense map.) type: string default: "/mission_point_cloud"
+    -vis_pointcloud_publish_in_sensor_frame_with_tf (If enabled, the point
+      clouds are published in the sensor frame and the transformation between
+      sensor frame and world frame is published to the tf tree. If disabled,
+      the pointclouds are published in the world frame. This flag is not
+      compatible with --vis_pointcloud_accumulated_before_publishing.)
+      type: bool default: false
+    -vis_pointcloud_reproject_depth_maps_with_undistorted_camera (If enabled,
+      the undistorted depth camera is used to reproject the depth maps to point
+      cloud. The intended use case is if a depth map is created from an image
+      that has been undistorted, hence the undistorted camera should be used to
+      reproject it.) type: bool default: false
+    -vis_pointcloud_sequential_speedup (Defines the playback speed of the
+      sequential point cloud publisher.) type: int32 default: 1
+    -vis_pointcloud_sleep_between_point_clouds_ms (Time the visualization
+      sleeps between publishing point clouds.) type: int32 default: 1
+    -vis_pointcloud_visualize_every_nth (Visualize only every nth pointcloud.)
+      type: int32 default: 1
+    -vis_resource_visualization_frequency (Frequency of the image resources
+      visualization in Hz.) type: double default: 8
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/visualization/src/sequential-plotter.cc:
+    -vis_seq_landmark_fadeout (Smoothly fade out landmark coloring.) type: bool
+      default: true
+    -vis_seq_synchronize_missions_on_distance (Synchronize missions based on
+      distance traveled.) type: bool default: true
+    -vis_seq_synchronize_missions_on_distance_percent (Synchronize missions
+      based on percent of trajectory.) type: bool default: true
+    -vis_seq_vertex_frequency (Publishing frequency in Hz.) type: int32
+      default: 10
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/visualization/src/spatially-distribute-missions.cc:
+    -spatially_distribute_missions_around_circle (Should sdm distribute the
+      missions around a circle.) type: bool default: false
+    -spatially_distribute_missions_dimension (Dimension to shift along [x, y,
+      z] = [0, 1, 2].) type: int32 default: 0
+    -spatially_distribute_missions_meters (Amount to shift missions when
+      distributing them spatially.) type: double default: 20
+
+  Flags from /home/peiweipan/maplab_ws/src/maplab/visualization/src/viwls-graph-plotter.cc:
+    -vis_abs_6dof_constraint_covariances (Whether to visualize the
+      absolute_6dof_constraint covariances.) type: bool default: false
+    -vis_check_landmark_constrained (Whether to only plot well-constrained
+      landmarks or all landmarks.) type: bool default: true
+    -vis_color_by_height_offset_m (The offset for coloring by height.)
+      type: double default: 0
+    -vis_color_by_height_period_m (The period for coloring by height.)
+      type: double default: 3
+    -vis_color_by_landmark_type (Color landmarks by feature type.) type: bool
+      default: false
+    -vis_color_by_mission (Color landmarks and pose-graph edges by mission.)
+      type: bool default: true
+    -vis_color_landmarks_by_first_observer_frame (Whether to color landmarks by
+      their first observer.) type: bool default: false
+    -vis_color_landmarks_by_height (Whether to color landmarks by height.)
+      type: bool default: false
+    -vis_color_landmarks_by_number_of_observations (Whether to color landmarks
+      by number of observers.) type: bool default: false
+    -vis_color_landmarks_by_observer_datasets (Whether to color landmarks by
+      number of observer_datasets.) type: bool default: false
+    -vis_color_landmarks_by_time (Whether to color landmarks by time.)
+      type: bool default: false
+    -vis_color_landmarks_by_time_period_seconds (The period for time coloring
+      in seconds.) type: double default: 60
+    -vis_color_mission_with_unknown_baseframe_transformation (Whether or not to
+      color missions with unknown baseframe transformation.) type: bool
+      default: true
+    -vis_color_salt (Salt to multiply the hash with for coloring.) type: int32
+      default: 1
+    -vis_landmark_gray_level (Gray level for landmark color.) type: int32
+      default: 170
+    -vis_landmarks_max_observers (Maximum number of observers to use for
+      coloring scale in  --color_by_observers and
+      --color_by_observer_datasets.) type: int32 default: 5
+    -vis_landmarks_min_number_of_observer_missions (Minimum number of observer
+      missions for a landmark to be visualized.) type: int32 default: 1
+    -vis_landmarks_min_observers (Minimum number of observers to use for
+      coloring scale in  --color_by_observer_datasets.) type: int32 default: 1
+    -vis_lc_edge_covariances (Whether to visualize the loop closure edge
+      covariances.) type: bool default: false
+    -vis_offset_landmarks_by_first_observer_frame_m (Separates landmarks by
+      first observer frame with the given offset along the x axis.)
+      type: double default: 0
+    -vis_offset_x_m (Offset in x for RViz visualization) type: double
+      default: 0
+    -vis_offset_y_m (Offset in y for RViz visualization) type: double
+      default: 0
+    -vis_offset_z_m (Offset in z for RViz visualization) type: double
+      default: 0
+    -vis_scale (Scale for visualizing edges and landmarks.) type: double
+      default: 1
+    -vis_show_only_landmark_type (Only show landmarks with a certain feature
+      type. Empty string means all landmark types are displayed.) type: string
+      default: ""
+    -vis_wait_for_traversal_edge_subscriber (If true, the RViz publisher waits
+      for a subscriber before publishing the traversal edges of a mission.)
+      type: bool default: false

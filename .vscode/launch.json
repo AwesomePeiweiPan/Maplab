@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+       {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/home/peiweipan/maplab_ws/devel/lib/rovioli/rovioli",
+            "args": [
+                "--alsologtostderr=1",
+                "--v=2",
+                "--sensor_calibration_file=/home/peiweipan/maplab_ws/src/maplab/Data/MapBuilding/euroc.yaml",
+                "--datasource_type=rosbag",
+                "--save_map_folder=/home/peiweipan/maplab_ws/src/maplab/Data/MapBuilding/",
+                "--optimize_map_to_localization_map=false",
+                "--map_builder_save_image_as_resources=false",
+                "--datasource_rosbag=/home/peiweipan/maplab_ws/src/maplab/Data/MapBuilding/MH_01_easy.bag",
+                "--rovio_enable_frame_visualization=false"
+            ],
+            "stopAtEntry": false,
+            "cwd": "/home/peiweipan/maplab_ws/src/maplab/applications/rovioli/app",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true                    
+                }
+            ],
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}
